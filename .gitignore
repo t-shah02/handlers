@@ -1,8 +1,8 @@
-# Dependencies
-.psci_modules
-bower_components
+.DS_Store
 node_modules
-
-# Generated files
-.psci
-output
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example

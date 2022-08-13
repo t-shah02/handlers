@@ -1,2 +1,28 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+<script>
+    import Card from "../components/Card.svelte";   
+
+</script>
+
+<svelte:head>
+    <title> Handlers - Home </title>
+</svelte:head>
+
+<div class="card-box">
+    <Card planName="adad" />
+    <Card planName="adad" />
+    <Card planName="adad" />
+    <Card planName="adad" />
+    <Card planName="adad" />
+    <Card planName="adad" />
+</div>
+
+
+
+<style>
+    .card-box {
+        display : flex;
+        justify-content: center;
+        flex-wrap : wrap;
+    }
+</style>

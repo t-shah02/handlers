@@ -1,39 +1,123 @@
+<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item company-name" href="/"> HANDLERS </a>
 
-<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="./">
-        <img class="handlers-logo" src="https://handlers.ca/wp-content/uploads/2022/06/Black-Logo.png">
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href="/">
-          Home
-        </a>
-  
-        <a class="navbar-item" href="/privacy">
-          Privacy Policy
-        </a>
-  
-        
-      </div>
-  
-      
-    </div>
-  </nav>
+		<a
+			role="button"
+			class="navbar-burger"
+			aria-label="menu"
+			aria-expanded="false"
+			data-target="navbarBasicExample"
+		>
+			<span aria-hidden="true" />
+			<span aria-hidden="true" />
+			<span aria-hidden="true" />
+		</a>
+	</div>
 
+	<div id="navbarBasicExample" class="navbar-menu">
+		<div class="navbar-start">
+			<a class="navbar-item" href="/">
+				<i class="fa-solid fa-house" />
+				Home
+			</a>
+
+			<a class="navbar-item" href="/">
+				<i class="fa-solid fa-coins" />
+				Pricing
+			</a>
+
+			<a class="navbar-item" href="/">
+				<i class="fa-solid fa-comment" />
+				Contact
+			</a>
+
+			<a class="navbar-item" href="/privacy">
+				<i class="fa-solid fa-shield" />
+				Privacy Policy
+			</a>
+		</div>
+
+		<div class="navbar-end">
+			<a class="navbar-item">
+				<label class="switch">
+					<input type="checkbox" />
+					<span class="slider round" />
+				</label>
+			</a>
+		</div>
+	</div>
+</nav>
 
 <style>
-  .handlers-logo {
-    filter: invert(1);
-    width: 52px;
-  }
-</style>
+	i {
+		margin-right: 5px;
+	}
 
+	.company-name {
+		font-size: 28px;
+	}
+
+    /* https://www.w3schools.com/css/css_list.asp */  
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 60px;
+		height: 34px;
+    transform : scale(0.90);
+	}
+
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+
+	.slider:before {
+		position: absolute;
+		content: '';
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+
+	input:checked + .slider {
+		background-color: gold;
+	}
+
+	input:focus + .slider {
+		box-shadow: 0 0 1px gold;
+	}
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
+	}
+
+	.slider.round:before {
+		border-radius: 50%;
+	}
+</style>

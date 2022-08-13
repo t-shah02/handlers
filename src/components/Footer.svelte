@@ -6,16 +6,13 @@
 </script>
 
 <footer>
-	<h1>© {YEAR} HANDLERS. Created by ... devs</h1>
+	<h1 class = "footer-text">© {YEAR} HANDLERS. Created by Big Leaf Consulting devs</h1>
 </footer>
 
 <style>
 	footer {
-		position: fixed;
-		left: 0;
-		bottom: 0;
 		width: 100%;
-        height : 10%;
+        height : 7%;
 		background-color: rgb(255, 255, 255);
 		border-style:solid;
 		border-color: rgb(245, 245, 245);
@@ -23,8 +20,9 @@
 		text-align: center;
 	}
 
-	.footer .h1 {
+	footer .footer-text {
 		color: black;
+		padding-top: 10px;
 	}
 
 

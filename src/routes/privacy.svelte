@@ -53,10 +53,8 @@
         Types of Data Collected
         Personal Data
         While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you (“Personal Data”). Personally identifiable information may include, but is not limited to:
-        
-        ·        Email address
-        
-        ·        Cookies and Usage Data
+      
+    
         
         We only use your Personal Data to reach out to you in the event that you have asked us to do so. You are automatically opted out of receiving any and all communications from us.
         
@@ -207,13 +205,35 @@
         
         ·        By visiting this page on our website: https://www.handlers.ca/contact-us/
     </p>
+    <ul>
+        <li>Email address</li>
+        <li>Cookies and Usage Data</li>
+    </ul>
 </div>
 
 
 <style>
     .policy-container {
-        background-color : black;
-        color : white;
+        /* background-color : white; */
+        color : black;
+        position: relative;
+        margin: 50px auto;
+        top: 0px;
+        bottom: 100px;
+        position: relative;
+        width: 1000px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .policy-container {
+            width: 300;
+        }
+    }
+
+
+    ul {
+        margin-left : 20px;
+        list-style-type: circle;
     }
 
     .policy-container p {

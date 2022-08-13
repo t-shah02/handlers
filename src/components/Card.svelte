@@ -14,11 +14,13 @@
         <h1 class="plan"> {planName} </h1>
         <p class="guest-range"> {guestRange} </p>
     </div>
+
     <h1 class="price">
         {price}
     </h1>
     <hr>
 
+    <h1 style="text-align : center; margin-bottom : 8.5px; color : grey;">Per Staff Member Per Hour</h1>
     <div class="perks-container">
         <h1 class="perks"> Perks </h1>
         {#each perks as perk}

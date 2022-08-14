@@ -18,6 +18,8 @@
 		border-color: rgb(245, 245, 245);
 		color: white;
 		text-align: center;
+		position : fixed;
+		bottom : 0;
 	}
 
 	footer .footer-text {

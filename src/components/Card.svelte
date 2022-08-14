@@ -8,7 +8,7 @@
     
 
 </script> 
-
+    
 <div class="plan-card">
     <div class="plan-card-header" style="background-color: {headerColor};">
         <h1 class="plan"> {planName} </h1>
@@ -31,7 +31,10 @@
         {/each}
     
     </div>
-    <button class="button is-primary">Buy now</button>
+    <button class="button is-primary">
+        <i class="fa-solid fa-money-bill"></i>
+        Buy now
+    </button>
 </div>
 
 <style>
@@ -64,16 +67,21 @@
         margin-bottom : 10px;
     }
  
-    
+    i { 
+        margin-right : 5px;
+    }
 
     .perk-name {
         margin-left : 10px;
+        font-style : italic;
     }
 
     .button {
         display : block;
+        margin-top : 20px;
         margin-left : auto;
         margin-right : auto;
+        text-transform: uppercase;
     }
 
     .plan-card-header {

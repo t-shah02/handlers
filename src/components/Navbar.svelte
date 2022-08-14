@@ -1,12 +1,29 @@
 <script>
-  let darkModeOn = false;
-  
-  const toggleDarkMode = () => {
-    darkModeOn = !darkModeOn;
-    //localStorage.setItem("darkmode",JSON.stringify(darkModeOn));
-    console.log(darkModeOn);
-  }
 
+	import { fade } from "svelte/transition/";
+
+
+	let darkModeOn = false;
+	
+
+
+	const toggleDarkMode = () => {
+		darkModeOn = !darkModeOn;
+		//localStorage.setItem("darkmode",JSON.stringify(darkModeOn));
+		console.log(darkModeOn);
+	};
+
+	function handleCursorOnDarkModeToggle(event) {
+		const target = event.target;
+		if (target.nodeName !== "I") {
+			target.style.cursor = "pointer"; 
+		}
+		else {
+			console.log("hovered on non I element!");
+			target.style.cursor = "auto";
+		}
+	}
+	
 </script>
 
 <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
@@ -50,16 +67,16 @@
 		</div>
 
 		<div class="navbar-end">
-			<a class="navbar-item dark-mode-toggler">
+			<a on:mouseover={handleCursorOnDarkModeToggle} class="navbar-item dark-mode-toggler">
 				<label class="switch">
 					<input on:change={toggleDarkMode} type="checkbox" />
 					<span class="slider round" />
 				</label>
-        {#if !darkModeOn}
-          <i class="fa-solid fa-moon toggle-icon"></i>
-        {:else}
-          <i class="fa-solid fa-sun toggle-icon"></i>
-        {/if}
+				{#if !darkModeOn}
+					<i in:fade class="fa-solid fa-sun toggle-icon" />
+				{:else}
+					<i in:fade class="fa-solid fa-moon toggle-icon" />
+				{/if}
 			</a>
 		</div>
 	</div>
@@ -74,34 +91,30 @@
 		font-size: 28px;
 	}
 
-    /* https://www.w3schools.com/css/css_list.asp */  
+	/* https://www.w3schools.com/css/css_list.asp */
 	.switch {
 		position: relative;
 		display: inline-block;
 		width: 60px;
 		height: 34px;
-    transform : scale(0.90);
-   
+		transform: scale(0.9);
 	}
-  
-  .toggle-icon {
-    transform : scale(1.5);
-    margin-left : 20px;
-    color : black;
-  }
 
-  .dark-mode-toggler {
-    background-color : inherit;
-  }
-  
- 
+	.toggle-icon {
+		transform: scale(1.5);
+		margin-left: 20px;
+		color: black;
+	}
+
+	.dark-mode-toggler {
+		background-color: inherit;
+	}
 
 	.switch input {
 		opacity: 0;
 		width: 0;
 		height: 0;
 	}
-
 
 	.slider {
 		position: absolute;

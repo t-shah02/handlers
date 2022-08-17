@@ -21,11 +21,12 @@
 
 <div class="cover">
 	<div data-aos="fade-right" class="text-box cover-item">
+		<h1 class="cover-text"> AN UNFORGETTABLE NIGHT, AN EXCLUSIVE AFFAIR, AN EVENT TO REMEMBER</h1>
+		<div class="logo-img cover-item" />
 		<h1 class="cover-text">We'll Handle It</h1>
 		<h2>Event <span id="event-text"></span></h2>
 	</div>
-	<div class="logo-img cover-item" />
-	<a data-aos="fade-left" class="purchase-link cover-item" href="/pricing"> Purchase event staffing</a>
+	
 </div>
 
 <section></section>
@@ -38,17 +39,12 @@
 		margin-right: 7.5px;
 	}
 
-	.purchase-link {
-		margin-left: 8px;
-		border-radius: 10px;
-		padding: 7px;
-		color: gold;
-		border: 2px solid white;
-		transition: all 300ms ease-in-out;
-	}
-
-	.purchase-link:hover {
-		transform: scale(1.05);
+	
+	.text-box {
+		display : flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items : center;
 	}
 
 	.cover-item {
@@ -101,18 +97,19 @@
 	}
 
 	h2 {
-		margin-left: 10.5px;
+		text-align : center;
 		color: white;
 		font-weight: 100;
 		font-size: 17px;
+		margin-bottom : 15px;
+	}
+
+	.cover-text {
+		padding-top : 20px;
 	}
 
 	.cover {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		margin-top: 50px;
+		margin-top: 0px;
 		background-image: url('https://handlers.ca/wp-content/uploads/2022/06/Rose-Backg3.png');
 		background-position: center center;
 		background-size: cover;
@@ -128,5 +125,8 @@
 		height: 200px;
         -webkit-animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 	    animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+		animation-delay: 500ms;
+		margin-bottom : 0px;
+		margin-top : 0px;
 	}
 </style>

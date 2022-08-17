@@ -6,11 +6,12 @@
     export let perks = [];
     export let headerColor = "black";
     
+    
 
 </script> 
     
 <div class="plan-card">
-    <div class="plan-card-header" style="background-color: {headerColor};">
+    <div class="plan-card-header is-danger" style="background-color: {headerColor};">
         <h1 class="plan"> {planName} </h1>
         <p class="guest-range"> {guestRange} </p>
     </div>
@@ -46,7 +47,10 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition : transform 200ms ease-in-out;
         border-radius : 15px;
+        background-color : white;
     }
+
+    
 
     .perks-container {
         display : flex;
@@ -82,6 +86,8 @@
         margin-left : auto;
         margin-right : auto;
         text-transform: uppercase;
+        background: rgb(208,144,48);
+        background: linear-gradient(90deg, rgba(208,144,48,1) 30%, rgba(233,85,85,1) 49%, rgba(229,227,27,1) 86%);
     }
 
     .plan-card-header {

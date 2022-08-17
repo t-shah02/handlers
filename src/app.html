@@ -15,6 +15,14 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	<meta name="viewport" content="width=device-width" />
+
+	<style>
+		html, body {
+
+			background-color: #141414ff;
+		}
+	</style>
+
 	%sveltekit.head%
 </head>
 
@@ -23,7 +31,7 @@
 	<script>
 		AOS.init();
 		document.addEventListener("DOMContentLoaded", function () {
-			setTimeout(function () { AOS.refresh(); }, 150);
+			setTimeout(function () { AOS.refresh(); }, 100);
 		});
 	</script>
 </body>

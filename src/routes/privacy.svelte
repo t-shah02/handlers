@@ -364,18 +364,22 @@
 <style>
 	.policy-container {
 		/* background-color : white; */
-		color: black;
+		color: white;
 		position: relative;
 		margin: 50px auto;
+		margin-bottom : 100px;
 		top: 20px;
 		bottom: 100px;
 		position: relative;
 		width: 900px;
+		border : 2px solid green;
+		border-radius : 7.5px;
 	}
 
     .policy-section {
         margin-top : 40px;
         margin-bottom : 40px;
+		margin-left : 20px;
     }
 
 	.policy-container h3 {

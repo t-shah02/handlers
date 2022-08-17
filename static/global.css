@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
-* {
-    font-family: 'Fjalla One', sans-serif;
+:root {
+    --black: #000000ff;
+
+    --rich-black-fogra-39: #111111ff;
+
+    --jet: #333333ff;
+
+    --white: #ffffffff;
+
+    --flickr-blue: #0761d1ff;
+
+    --french-rose: #ea558dff;
 }
 
-body {
-    /* background-image : url("https://thumbs.dreamstime.com/b/two-wine-glasses-red-wine-bottle-wine-table-red-background-two-wine-glasses-red-wine-bottle-wine-234926059.jpg"); */
-    background-size : cover;
-    background-position: center;
-    background-attachment : fixed;
+* {
+    font-family: 'Fjalla One', sans-serif;
 }

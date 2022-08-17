@@ -66,19 +66,7 @@
 			</a>
 		</div>
 
-		<div class="navbar-end">
-			<a on:mouseover={handleCursorOnDarkModeToggle} class="navbar-item dark-mode-toggler">
-				<label class="switch">
-					<input on:change={toggleDarkMode} type="checkbox" />
-					<span class="slider round" />
-				</label>
-				{#if !darkModeOn}
-					<i in:fade class="fa-solid fa-sun toggle-icon" />
-				{:else}
-					<i in:fade class="fa-solid fa-moon toggle-icon" />
-				{/if}
-			</a>
-		</div>
+		
 	</div>
 </nav>
 
@@ -91,75 +79,17 @@
 		font-size: 28px;
 	}
 
-	/* https://www.w3schools.com/css/css_list.asp */
-	.switch {
-		position: relative;
-		display: inline-block;
-		width: 60px;
-		height: 34px;
-		transform: scale(0.9);
+	.navbar-burger {
+		color : white;
 	}
 
-	.toggle-icon {
-		transform: scale(1.5);
-		margin-left: 20px;
-		color: black;
+	.navbar {
+		background-color : 	#1e2124;
 	}
 
-	.dark-mode-toggler {
-		background-color: inherit;
-	}
+	.navbar-item {
+		color : white;
+		transition : background-color 200ms ease-in-out;
+	}	
 
-	.switch input {
-		opacity: 0;
-		width: 0;
-		height: 0;
-	}
-
-	.slider {
-		position: absolute;
-		cursor: pointer;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: #ccc;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
-	}
-
-	.slider:before {
-		position: absolute;
-		content: '';
-		height: 26px;
-		width: 26px;
-		left: 4px;
-		bottom: 4px;
-		background-color: white;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
-	}
-
-	input:checked + .slider {
-		background-color: gold;
-	}
-
-	input:focus + .slider {
-		box-shadow: 0 0 1px gold;
-	}
-
-	input:checked + .slider:before {
-		-webkit-transform: translateX(26px);
-		-ms-transform: translateX(26px);
-		transform: translateX(26px);
-	}
-
-	/* Rounded sliders */
-	.slider.round {
-		border-radius: 34px;
-	}
-
-	.slider.round:before {
-		border-radius: 50%;
-	}
 </style>

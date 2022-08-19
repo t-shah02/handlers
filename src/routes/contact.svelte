@@ -38,9 +38,9 @@
 <div data-aos="fade-up">
 	<h1>Contact us now!</h1>
 	<div class="contacts">
-		<span>
+		<h2>
 			Our address: 1234 Nobody Street AAA 123, ON, Canada
-		</span>
+		</h2>
 		<h2 class="phone-number">999-999-9999</h2>
 	</div>
 	<div>
@@ -109,6 +109,7 @@
 		margin-top: 0px;
 		margin-bottom: 20px;
 		width: 75%;
+		color : white;
 	}
 
 	.button {
@@ -128,4 +129,12 @@
 	textarea {
 		width: 60%;
 	}
+
+
+	.contacts h2 {
+		margin-top:15px;
+		text-align: center;
+	}
+
+	
 </style>

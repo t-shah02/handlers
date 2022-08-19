@@ -32,7 +32,7 @@
         {/each}
     
     </div>
-    <button class="button is-primary">
+    <button class="button is-primary" style="background-color: {headerColor}">
         <i class="fa-solid fa-money-bill"></i>
         Buy now
     </button>
@@ -86,8 +86,6 @@
         margin-left : auto;
         margin-right : auto;
         text-transform: uppercase;
-        background: rgb(208,144,48);
-        background: linear-gradient(90deg, rgba(208,144,48,1) 30%, rgba(233,85,85,1) 49%, rgba(229,227,27,1) 86%);
     }
 
     .plan-card-header {

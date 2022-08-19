@@ -26,7 +26,7 @@
 	
 </script>
 
-<nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item company-name" href="/"> HANDLERS </a>
 
@@ -84,12 +84,18 @@
 	}
 
 	.navbar {
-		background-color : 	#1e2124;
+		background-color : 	#282b30;
+		
 	}
 
 	.navbar-item {
 		color : white;
 		transition : background-color 200ms ease-in-out;
 	}	
+
+	.navbar-item:hover {
+		background-color : #2f71e8ff;
+		color :  gold;
+	}
 
 </style>

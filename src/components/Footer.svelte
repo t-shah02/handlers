@@ -13,17 +13,15 @@
 	footer {
 		width: 100%;
         height : 7%;
-		background-color: rgb(255, 255, 255);
-		border-style:solid;
-		border-color: rgb(245, 245, 245);
-		color: white;
 		text-align: center;
 		position : fixed;
 		bottom : 0;
+		background-color : #282b30;
+
 	}
 
 	footer .footer-text {
-		color: black;
+		color: white;
 		padding-top: 10px;
 	}
 

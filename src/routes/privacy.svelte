@@ -372,7 +372,7 @@
 		bottom: 100px;
 		position: relative;
 		width: 900px;
-		border : 2px solid green;
+		border : 2px solid white;
 		border-radius : 7.5px;
 	}
 

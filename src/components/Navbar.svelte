@@ -1,29 +1,27 @@
 <script>
-
-	import { fade } from "svelte/transition/";
-
+	import { fade } from 'svelte/transition/';
+	import { onMount } from 'svelte';
 
 	let darkModeOn = false;
-	
+	let burgerToggled = false;
 
+	onMount(() => {
+		let hamburger = document.querySelector('.navbar-burger');
+		let menu = document.querySelector('.navbar-menu');
 
-	const toggleDarkMode = () => {
-		darkModeOn = !darkModeOn;
-		//localStorage.setItem("darkmode",JSON.stringify(darkModeOn));
-		console.log(darkModeOn);
-	};
+		hamburger.addEventListener('click', () => {
+			if (burgerToggled) {
+				hamburger.classList.remove('is-active');
+				menu.classList.remove('is-active');
+			} else {
+				hamburger.classList.toggle('is-active');
+				menu.classList.toggle('is-active');
+				menu.style.backgroundColor =  "#282b30";
+			}
 
-	function handleCursorOnDarkModeToggle(event) {
-		const target = event.target;
-		if (target.nodeName !== "I") {
-			target.style.cursor = "pointer"; 
-		}
-		else {
-			console.log("hovered on non I element!");
-			target.style.cursor = "auto";
-		}
-	}
-	
+			burgerToggled = !burgerToggled;
+		});
+	});
 </script>
 
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
@@ -65,8 +63,6 @@
 				Privacy Policy
 			</a>
 		</div>
-
-		
 	</div>
 </nav>
 
@@ -80,22 +76,25 @@
 	}
 
 	.navbar-burger {
-		color : white;
+		color: white;
+		background-color:#282b30;
 	}
 
 	.navbar {
-		background-color : 	#282b30;
-		
+		background-color: #282b30;
+		z-index: 1000;
 	}
 
 	.navbar-item {
-		color : white;
-		transition : background-color 200ms ease-in-out;
-	}	
+		color: white;
+		transition: background-color 200ms ease-in-out;
+	}
 
 	.navbar-item:hover {
-		background-color : #2f71e8ff;
-		color :  gold;
+		background-color: #2f71e8;
+		color: gold;
 	}
+
+	
 
 </style>

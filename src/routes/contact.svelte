@@ -39,9 +39,11 @@
 	<h1>Contact us now!</h1>
 	<div class="contacts">
 		<h2>
-			Our address: 1234 Nobody Street AAA 123, ON, Canada
+			<i class="fa-solid fa-address-book"></i> 1234 Nobody Street AAA 123, ON, Canada
 		</h2>
-		<h2 class="phone-number">999-999-9999</h2>
+		<h2><i class="fa-solid fa-phone"></i> 999-999-9999</h2>
+		<h2><i class="fa-solid fa-envelope"></i>  <a style="color : gold" href="mailto:someemail@gmail.com">someemail@gmail.com</a></h2>
+		
 	</div>
 	<div>
 		<h1 class="send-msg-txt">Send us a message</h1>
@@ -73,9 +75,6 @@
 
 <style>
 	
-	.phone-number {
-		text-align: left;
-	}
 
 	.notification {
 		margin-bottom: 15px;
@@ -94,6 +93,10 @@
 
 	i {
 		margin-left: 4.5px;
+	}
+
+	h2 i {
+		margin-right : 5px;
 	}
 
 	h1 {

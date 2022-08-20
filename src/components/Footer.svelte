@@ -17,6 +17,7 @@
 		position : fixed;
 		bottom : 0;
 		background-color : #282b30;
+		z-index : 1000;
 
 	}
 

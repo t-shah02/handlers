@@ -12,7 +12,7 @@
 <style>
 	footer {
 		width: 100%;
-        height : 7%;
+        height : 40px;
 		text-align: center;
 		position : fixed;
 		bottom : 0;

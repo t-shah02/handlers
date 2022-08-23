@@ -1,6 +1,7 @@
 
 export async function POST({ request }) {
-    const { message } = await request.json();
+    const { message } = await request.json();   
+    
 
     if (!message) {
         return {
@@ -12,7 +13,7 @@ export async function POST({ request }) {
         };
     }
 
-    console.log(message);
+    
 
     // make some 3rd party API calls here to handle Email composition and sending (Sendgrid might be a good option)
 

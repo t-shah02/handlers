@@ -264,7 +264,7 @@
 		color: white;
 		margin-top : 0;
 		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-bottom: 50px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}

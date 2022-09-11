@@ -42,7 +42,10 @@
 				We give you peace of mind, so you can focus on enjoying your event with your loved ones.
 			</p>
 		</div>
-		<div style="background-image : url('https://media.discordapp.net/attachments/1018012896162218014/1018013283783016588/pexels-rene-asmussen-2504913.jpg?width=1007&height=670')" class="info-img img-one" />
+		<div
+			style="background-image : url('https://media.discordapp.net/attachments/1018012896162218014/1018013283783016588/pexels-rene-asmussen-2504913.jpg?width=1007&height=670')"
+			class="info-img img-one"
+		/>
 	</div>
 
 	<div class="info-ctn">
@@ -53,7 +56,10 @@
 			<p>We work with the best staff to make your event memorable & engaging.</p>
 			<p>We focus on Quality: Quality People, Quality Venues, & Quality Experiences.</p>
 		</div>
-		<div style="background-image : url('https://media.discordapp.net/attachments/1018012896162218014/1018013157513510972/pexels-maria-orlova-4947565.jpg?width=446&height=669')" class="info-img img-two"></div>
+		<div
+			style="background-image : url('https://media.discordapp.net/attachments/1018012896162218014/1018013157513510972/pexels-maria-orlova-4947565.jpg?width=446&height=669')"
+			class="info-img img-two"
+		/>
 	</div>
 </div>
 
@@ -85,33 +91,33 @@
 	</div>
 	<div data-aos="fade-right" class="event-ctn">
 		{#if innerWidth <= 1024}
-		<div class="event-text">
-			<h1>Event Staffing</h1>
-			<p>
-				Event Managers, Bartenders, Servers & Wait Staff, DJ / Entertainers, Security Staff,
-				Photographers, Videographers, Event Fillers, Bar Back, Hosts & Hostesses, Models, Dancers,
-				and Influencers. If your event needs people, we have the professionals to make it
-				unforgettable.
-			</p>
-		</div>
-		<img
-			src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
-			alt="bartender"
-		/>
+			<div class="event-text">
+				<h1>Event Staffing</h1>
+				<p>
+					Event Managers, Bartenders, Servers & Wait Staff, DJ / Entertainers, Security Staff,
+					Photographers, Videographers, Event Fillers, Bar Back, Hosts & Hostesses, Models, Dancers,
+					and Influencers. If your event needs people, we have the professionals to make it
+					unforgettable.
+				</p>
+			</div>
+			<img
+				src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
+				alt="bartender"
+			/>
 		{:else}
-		<img
-		src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
-		alt="bartender"
-	/>
-	<div class="event-text">
-		<h1>Event Staffing</h1>
-		<p>
-			Event Managers, Bartenders, Servers & Wait Staff, DJ / Entertainers, Security Staff,
-			Photographers, Videographers, Event Fillers, Bar Back, Hosts & Hostesses, Models, Dancers,
-			and Influencers. If your event needs people, we have the professionals to make it
-			unforgettable.
-		</p>
-	</div>
+			<img
+				src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
+				alt="bartender"
+			/>
+			<div class="event-text">
+				<h1>Event Staffing</h1>
+				<p>
+					Event Managers, Bartenders, Servers & Wait Staff, DJ / Entertainers, Security Staff,
+					Photographers, Videographers, Event Fillers, Bar Back, Hosts & Hostesses, Models, Dancers,
+					and Influencers. If your event needs people, we have the professionals to make it
+					unforgettable.
+				</p>
+			</div>
 		{/if}
 	</div>
 	<div data-aos="fade-left" class="event-ctn">
@@ -149,9 +155,9 @@
 	}
 
 	.info-ctn {
-		display : flex;
+		display: flex;
 		color: white;
-		flex-direction:column;
+		flex-direction: column;
 		background-color: black;
 		left: 0;
 		right: 0;
@@ -164,36 +170,36 @@
 		word-wrap: break-word;
 	}
 
-	@media only screen and (min-width:1024px) {
+	@media only screen and (min-width: 1024px) {
 		.info-ctn {
-		display : flex;
-		color: white;
-		flex-direction:row;
-		background-color: black;
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 70px;
-		width: 75%;
-		border-radius: 0px;
-		box-shadow: 2px 2px 4px 8px hsla(60, 95%, 49%, 0.65);
-		word-wrap: break-word;
+			display: flex;
+			color: white;
+			flex-direction: row;
+			background-color: black;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 70px;
+			width: 75%;
+			border-radius: 0px;
+			box-shadow: 2px 2px 4px 8px hsla(60, 95%, 49%, 0.65);
+			word-wrap: break-word;
+		}
 	}
-	}
-	
+
 	.info-img {
 		background-repeat: no-repeat;
-		background-size : cover;
-		margin : 20px;
-		width : 50%;
+		background-size: cover;
+		margin: 20px;
+		width: 50%;
 	}
-	
+
 	.img-two {
 		background-position: center;
 	}
 
-	.gay {	
+	.gay {
 		width: 100%;
 		z-index: 100;
 		background-color: transparent;

@@ -367,7 +367,7 @@
 		color: white;
 		position: relative;
 		margin: 50px auto;
-		margin-bottom : 100px;
+		margin-bottom : 120px;
 		top: 20px;
 		bottom: 100px;
 		position: relative;

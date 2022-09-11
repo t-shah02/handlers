@@ -1,7 +1,10 @@
 
+import { zohoTransporter, BOT_SENDER_EMAIL, RECEPIENT_EMAIL } from "../../config/_mail_config";
+
 export async function POST({ request }) {
-    const { message } = await request.json();   
-    
+    const { message } = await request.json();
+
+
 
     if (!message) {
         return {
@@ -13,10 +16,35 @@ export async function POST({ request }) {
         };
     }
 
-    
+    const mailOptions = {
+        from: BOT_SENDER_EMAIL,
+        to: RECEPIENT_EMAIL,
+        subject: "Automated message from handlers.ca website",
+        text: message
+    };
 
-    // make some 3rd party API calls here to handle Email composition and sending (Sendgrid might be a good option)
+    const sendEmail = () => {
+        return new Promise((resolve, reject) => {
+            zohoTransporter.sendMail(mailOptions, (err, data) => {
+                if (err) {
+                    resolve(false);
+                }
+                else {
+                    resolve(true);
+                }
+            });
+        })
+    };
 
-    return { status: 200, body: { message: "The message was sent successfully!" } };
+    let emailSent = await sendEmail();
+
+    if (emailSent) {
+        return { status: 200, body: { message: "The message was sent successfully!" } };
+    }
+    else {
+        return { status: 503, body: { message: "Error communicating with the SMTP server with gmail, please try again later!" } };
+    }
+
+
 }
 

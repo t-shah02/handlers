@@ -4,7 +4,7 @@
 
 	const MAX_CHARACTER_LIMIT = 5000;
 	const LIMIT_REACHED_COLOR = '#FF1E00';
-	const LIMIT_NOT_REACHED_COLOR = '#59CE8F';
+	const LIMIT_NOT_REACHED_COLOR = 'rgba(246, 246, 6, 0.65);';
 	const WORD_BLACKLIST = [
 		'fuck',
 		'bitch',
@@ -89,7 +89,6 @@
 			body: JSON.stringify(body)
 		});
 		sendingMessage = false;
-		
 
 		messageSent = response.ok ? true : false;
 	}
@@ -104,7 +103,6 @@
 			filteredMessage = filteredMessage.replaceAll(SWEAR, '');
 		}
 
-
 		if (message.length !== filteredMessage.length) {
 			const animation = textbox.animate(SHAKE_ANIMATION, {
 				easing: 'ease',
@@ -113,7 +111,6 @@
 			animation.play();
 		}
 
-		
 		message = filteredMessage;
 
 		textbox.value = message;
@@ -127,19 +124,10 @@
 <div class="fade-ctn" data-aos="fade-up">
 	<div class="contacts">
 		<h1>Contact us now!</h1>
-		<h2>
-			<i class="fa-solid fa-address-book" /> 
-			<a style="color : gold" target="_blank" href="https://google.ca">1234 Nobody Street AAA 123, ON, Canada</a>
-		</h2>
-		<h2>
-			<i class="fa-solid fa-envelope" />
-			<a style="color : gold" href="mailto:someemail@gmail.com">someemail@gmail.com</a>
-		</h2>
-		<h2><i class="fa-solid fa-phone" /> 999-999-9999</h2>
-		
 	</div>
 	<div>
 		<h1 class="send-msg-txt">Send us a message</h1>
+
 		<textarea
 			bind:value={message}
 			bind:this={textbox}
@@ -151,7 +139,6 @@
 			maxlength={MAX_CHARACTER_LIMIT}
 		/>
 
-		
 		<h2 style="color : {characterLimitReached ? LIMIT_REACHED_COLOR : LIMIT_NOT_REACHED_COLOR}">
 			{message.length} / {MAX_CHARACTER_LIMIT}
 		</h2>
@@ -167,15 +154,22 @@
 			Send message
 			<i class="fa-solid fa-paper-plane" />
 		</button>
+
+		<div class="contact-info">
+			<h2>
+				<a style="color : rgba(246, 246, 6, 0.65);" href="mailto:handlers.ca@gmail.com"
+					>handlers.ca@gmail.com</a
+				>
+			</h2>
+			<h2>
+				<a style="color : rgba(246, 246, 6, 0.65)"> 999-999-9999</a>
+			</h2>
+		</div>
 	</div>
-
-
 </div>
 
 <style>
 
-	
-	
 	.notification {
 		margin-bottom: 15px;
 	}
@@ -195,11 +189,6 @@
 		margin-left: 4.5px;
 	}
 
-	h2 i {
-		margin-right: 5px;
-	}
-
-	
 
 	div {
 		margin-left: auto;
@@ -214,6 +203,7 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 100px;
 	}
 
 	h2 {
@@ -221,25 +211,27 @@
 		margin-top: 2.5px;
 		margin-right: 8.5px;
 		transition: color 500ms ease-in-out;
+		font-size: clamp(14px, 1.7vw, 17px);
 	}
 
-	textarea {
+
+	.textarea {
 		width: 60%;
-		resize : none;
 	}
 
 	.contacts {
-		margin-top : 65px;
+		margin-top: 65px;
 	}
 
 	.contacts h1 {
 		text-align: center;
 		margin-bottom: 0px;
-		font-size: 45px;
+		font-size: clamp(31px, 4vw, 45px);
 	}
 
-	.contacts h2 {
-		margin-top: 15px;
-		text-align: center;
+
+
+	.button {
+		background-color: rgba(246, 246, 6, 0.65);
 	}
 </style>

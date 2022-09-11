@@ -16,17 +16,24 @@
 			} else {
 				hamburger.classList.toggle('is-active');
 				menu.classList.toggle('is-active');
-				menu.style.backgroundColor =  "#282b30";
+				menu.style.backgroundColor =  "black";
 			}
 
 			burgerToggled = !burgerToggled;
 		});
 	});
+
+	$: outerWidth = 0;
+	$: innerWidth = 0;
+	$: outerHeight = 0;
+	$: innerHeight = 0;
+
 </script>
+<svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item company-name" href="/"> HANDLERS </a>
+		<a class="navbar-item company-name hover-item" href="/"> HANDLERS </a>
 
 		<a
 			role="button"
@@ -43,26 +50,33 @@
 
 	<div id="navbarBasicExample" class="navbar-menu">
 		<div class="navbar-start">
-			<a class="navbar-item" href="/">
+			<a class="navbar-item hover-item" href="/">
 				<i class="fa-solid fa-house" />
 				Home
 			</a>
 
-			<a class="navbar-item" href="/pricing">
+			<a class="navbar-item hover-item" href="/pricing">
 				<i class="fa-solid fa-coins" />
 				Pricing
 			</a>
 
-			<a class="navbar-item" href="/contact">
+			<a class="navbar-item hover-item" href="/contact">
 				<i class="fa-solid fa-comment" />
 				Contact
 			</a>
 
-			<a class="navbar-item" href="/privacy">
+			<a class="navbar-item hover-item" href="/privacy">
 				<i class="fa-solid fa-shield" />
 				Privacy Policy
 			</a>
 		</div>
+		{#if innerWidth >= 1205}
+		<div class="navbar-end">
+			<div class="navbar-item event-heading">
+				EXPERT PLANNING | BETTER STAFF | SEAMLESS MANAGEMENT
+			</div>
+		</div>
+		{/if}
 	</div>
 </nav>
 
@@ -77,22 +91,27 @@
 
 	.navbar-burger {
 		color: white;
-		background-color:#282b30;
+		background-color: black;
 	}
 
 	.navbar {
-		background-color: #282b30;
+		background-color: black;
 		z-index: 1000;
+		border-bottom: 3px solid rgba(246, 246, 6, 0.65);;
 	}
 
 	.navbar-item {
 		color: white;
-		transition: background-color 200ms ease-in-out;
+		transition: color 200ms ease-in-out;
 	}
 
-	.navbar-item:hover {
-		background-color: #2f71e8;
-		color: gold;
+	.hover-item:hover {
+		color: rgba(246, 246, 6, 0.65);;
+		background-color : inherit;
+	}
+
+	.event-heading {
+		font-size : 20px;
 	}
 
 	

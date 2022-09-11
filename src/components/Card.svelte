@@ -32,10 +32,6 @@
         {/each}
     
     </div>
-    <button class="button is-primary" style="background-color: {headerColor}">
-        <i class="fa-solid fa-money-bill"></i>
-        Buy now
-    </button>
 </div>
 
 <style>
@@ -43,10 +39,9 @@
         position : relative;
         margin : 20px;
         width : 300px;
-        height : 500px;
+        height : 450px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition : transform 200ms ease-in-out;
-        border-radius : 15px;
         background-color : white;
     }
 
@@ -80,13 +75,7 @@
         font-style : italic;
     }
 
-    .button {
-        display : block;
-        margin-top : 20px;
-        margin-left : auto;
-        margin-right : auto;
-        text-transform: uppercase;
-    }
+
 
     .plan-card-header {
         text-align : center;
@@ -112,6 +101,7 @@
     }
 
     hr {
+        background-color : black;
         margin-top : 0px;
     }
 

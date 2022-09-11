@@ -1,79 +1,10 @@
 <script>
 	import Card from '../components/Card.svelte';
-	import { onMount } from 'svelte';
 
-	onMount(() => {
-		const options = {
-			strings: ['Planning', 'Staffing', 'Management'],
-			typeSpeed: 50,
-			backSpeed: 50,
-			smartBackSpace: true,
-			loop: true
-		};
-
-		const typed = new Typed('#event-text', options);
-
-		const image = document.querySelector('#parallax-one');
-		new simpleParallax(image, {
-			delay: 0.45,
-			transition: 'cubic-bezier(0,0,0,1)'
-		});
-
-		particlesJS('particles-js', {
-			particles: {
-				number: { value: 48, density: { enable: true, value_area: 800 } },
-				color: { value: '#2f71e8' },
-				shape: {
-					type: 'circle',
-					stroke: { width: 0, color: '#000' },
-					polygon: { nb_sides: 6 },
-					image: { src: 'img/github.svg', width: 100, height: 100 }
-				},
-				opacity: {
-					value: 0.3,
-					random: true,
-					anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
-				},
-				size: {
-					value: 36.076771369474265,
-					random: false,
-					anim: { enable: true, speed: 10, size_min: 40, sync: false }
-				},
-				line_linked: { enable: false, distance: 200, color: '#ffffff', opacity: 1, width: 2 },
-				move: {
-					enable: true,
-					speed: 8,
-					direction: 'none',
-					random: false,
-					straight: false,
-					out_mode: 'out',
-					bounce: false,
-					attract: { enable: false, rotateX: 600, rotateY: 1200 }
-				}
-			},
-			interactivity: {
-				detect_on: 'canvas',
-				events: {
-					onhover: { enable: false, mode: 'grab' },
-					onclick: { enable: false, mode: 'push' },
-					resize: true
-				},
-				modes: {
-					grab: { distance: 400, line_linked: { opacity: 1 } },
-					bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-					repulse: { distance: 200, duration: 0.4 },
-					push: { particles_nb: 4 },
-					remove: { particles_nb: 2 }
-				}
-			},
-			retina_detect: true
-		});
-	});
-
-	$: outerWidth = 0
-	$: innerWidth = 0
-	$: outerHeight = 0
-	$: innerHeight = 0
+	$: outerWidth = 0;
+	$: innerWidth = 0;
+	$: outerHeight = 0;
+	$: innerHeight = 0;
 </script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
@@ -87,50 +18,51 @@
 		<h1 class="cover-text">AN UNFORGETTABLE NIGHT, AN EXCLUSIVE AFFAIR, AN EVENT TO REMEMBER</h1>
 		<div class="logo-img cover-item" />
 		<h1 class="cover-text">We'll Handle It</h1>
-		<h2>Event <span id="event-text" /></h2>
+		<h2>Event Planning | Event Management | Event Staffing</h2>
 	</div>
 </div>
 
-<div class="info-ctns">
-</div>
+<div class="info-ctns" />
 <div class="gay">
 	<div class="info-ctn">
-		<h1>WHY HANDLERS?</h1>
-		<p>Everyone wants to attend an event that is memorable and unique.</p>
-		<p>
-			Hosting events can be a challenge, and finding the right staff can be costly and time
-			consuming.
-		</p>
-		<p>
-			Planning events can be daunting, and most events do not meet attendee’s expectations of
-			quality.
-		</p>
-		<p>We simplify the planning, staffing, and management of your event.</p>
-		<p>We create an unforgettable experience for you and your guests</p>
-		<p>
-			We give you peace of mind, so you can focus on enjoying your event with your loved ones.
-		</p>
+		<div class="info-text">
+			<h1>WHY HANDLERS?</h1>
+			<p>Everyone wants to attend an event that is memorable and unique.</p>
+			<p>
+				Hosting events can be a challenge, and finding the right staff can be costly and time
+				consuming.
+			</p>
+			<p>
+				Planning events can be daunting, and most events do not meet attendee’s expectations of
+				quality.
+			</p>
+			<p>We simplify the planning, staffing, and management of your event.</p>
+			<p>We create an unforgettable experience for you and your guests</p>
+			<p>
+				We give you peace of mind, so you can focus on enjoying your event with your loved ones.
+			</p>
+		</div>
+		<div style="background-image : url('https://media.discordapp.net/attachments/1018012896162218014/1018013283783016588/pexels-rene-asmussen-2504913.jpg?width=1007&height=670')" class="info-img img-one" />
 	</div>
 
 	<div class="info-ctn">
-		<h1>THE HANDLERS DIFFERENCE</h1>
-		<p>We marry Event Planning, Staffing, & Management into one holistic service.</p>
-		<p>We simplify the entire process to give you more time to focus on what matters.</p>
-		<p>We work with the best staff to make your event memorable & engaging.</p>
-		<p>We focus on Quality: Quality People, Quality Venues, & Quality Experiences.</p>
+		<div class="info-text">
+			<h1>THE HANDLERS DIFFERENCE</h1>
+			<p>We marry Event Planning, Staffing, & Management into one holistic service.</p>
+			<p>We simplify the entire process to give you more time to focus on what matters.</p>
+			<p>We work with the best staff to make your event memorable & engaging.</p>
+			<p>We focus on Quality: Quality People, Quality Venues, & Quality Experiences.</p>
+		</div>
+		<div style="background-image : url('https://media.discordapp.net/attachments/1018012896162218014/1018013157513510972/pexels-maria-orlova-4947565.jpg?width=446&height=669')" class="info-img img-two"></div>
 	</div>
 </div>
 
 <div class="outer-ctn">
-	<div id="particles-js" />
 	<div class="text-box">
-		<h1 class="heading">EXPERT PLANNING | BETTER STAFF | SEAMLESS MANAGEMENT</h1>
 		<h1 class="heading">
 			Experts in Exciting Experiences
 			<br />
 			<a class="contact" href="/contact">Contact us to start planning your next event</a>
-			<br />
-			<a class="contact" href="/pricing">Need event staffing? Check out our pricing here!</a>
 		</h1>
 	</div>
 </div>
@@ -152,11 +84,7 @@
 		/>
 	</div>
 	<div data-aos="fade-right" class="event-ctn">
-		{#if outerWidth > 1024}
-		<img
-			src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
-			alt="bartender"
-		/>
+		{#if innerWidth <= 1024}
 		<div class="event-text">
 			<h1>Event Staffing</h1>
 			<p>
@@ -166,20 +94,24 @@
 				unforgettable.
 			</p>
 		</div>
+		<img
+			src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
+			alt="bartender"
+		/>
 		{:else}
-		<div class="event-text">
-			<h1>Event Staffing</h1>
-			<p>
-				Event Managers, Bartenders, Servers & Wait Staff, DJ / Entertainers, Security Staff,
-				Photographers, Videographers, Event Fillers, Bar Back, Hosts & Hostesses, Models, Dancers,
-				and Influencers. If your event needs people, we have the professionals to make it
-				unforgettable.
-			</p>
-		</div>
 		<img
-			src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
-			alt="bartender"
-		/>
+		src="https://handlers.ca/wp-content/uploads/2022/06/pexels-rene-asmussen-3217157-scaled.jpg"
+		alt="bartender"
+	/>
+	<div class="event-text">
+		<h1>Event Staffing</h1>
+		<p>
+			Event Managers, Bartenders, Servers & Wait Staff, DJ / Entertainers, Security Staff,
+			Photographers, Videographers, Event Fillers, Bar Back, Hosts & Hostesses, Models, Dancers,
+			and Influencers. If your event needs people, we have the professionals to make it
+			unforgettable.
+		</p>
+	</div>
 		{/if}
 	</div>
 	<div data-aos="fade-left" class="event-ctn">
@@ -197,72 +129,85 @@
 </div>
 
 <style>
-	#particles-js {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: #141414ff;
-		background-image: url('');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50% 50%;
-	}
-
 	.info-ctns {
-		background-image : url("https://handlers.ca/wp-content/uploads/2022/05/pexels-joonas-kaariainen-239466-scaled.jpg");
-		background-repeat: no-repeat;
-		background-position-x: center;
-		background-attachment: fixed;
-		background-size: cover;
-		min-height: 500px;
-		position: relative;
 		margin-top: 0px;
 		margin-bottom: 0px;
 	}
 
-	
 	.contact {
 		display: inline-block;
-		color: rgb(255, 144, 0);
+		background-color: rgba(246, 246, 6, 0.65);
+		color: white;
 		padding: 10px 7px 10px 7px;
 		margin-top: 10px;
-		border-radius: 10px;
-		transition: all 200ms ease-in-out;
+		transition: background-color 200ms ease-in-out;
+		max-width: 90%;
 	}
 
 	.contact:hover {
-		background-color: rgba(255, 144, 0, 255);
 		color: black;
 	}
 
 	.info-ctn {
-		color: black;
-		background-color: white;
+		display : flex;
+		color: white;
+		flex-direction:column;
+		background-color: black;
 		left: 0;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 70px;
 		width: 75%;
-		border-radius: 10px;
-		box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.65);
+		border-radius: 0px;
+		box-shadow: 2px 2px 4px 8px hsla(60, 95%, 49%, 0.65);
+		word-wrap: break-word;
 	}
 
-	.gay {
+	@media only screen and (min-width:1024px) {
+		.info-ctn {
+		display : flex;
+		color: white;
+		flex-direction:row;
+		background-color: black;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 70px;
+		width: 75%;
+		border-radius: 0px;
+		box-shadow: 2px 2px 4px 8px hsla(60, 95%, 49%, 0.65);
+		word-wrap: break-word;
+	}
+	}
+	
+	.info-img {
+		background-repeat: no-repeat;
+		background-size : cover;
+		margin : 20px;
+		width : 50%;
+	}
+	
+	.img-two {
+		background-position: center;
+	}
+
+	.gay {	
 		width: 100%;
 		z-index: 100;
-		background-color:transparent;
+		background-color: transparent;
 	}
 
 	.event-ctns {
-		background-image : url("https://res.cloudinary.com/yuliu/image/upload/e_brightness:-80/v1660932208/pexels-cottonbro-4667039-scaled_hoeyot.jpg");
+		background-image: url('https://res.cloudinary.com/yuliu/image/upload/e_brightness:-80/v1660932208/pexels-cottonbro-4667039-scaled_hoeyot.jpg');
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-attachment: fixed;
 		display: flex;
 		flex-direction: column;
 		color: white;
-		margin-top : 0;
+		margin-top: 0;
 		padding-top: 10px;
 		padding-bottom: 50px;
 		padding-left: 20px;
@@ -279,32 +224,33 @@
 	}
 
 	@media only screen and (max-width: 1024px) {
-
 		.event-ctn {
-			display:flex;
+			display: flex;
 			flex-direction: column;
-			justify-content:center;
+			justify-content: center;
 		}
 
 		img {
-		left:0;
-		right:0;
-		margin-left:auto;
-		margin-right:auto;
-		align-self:center;
-		width: 50%;
-		height: 100%;
-		margin: 20px;
-	}
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			align-self: center;
+			width: 50%;
+			height: 100%;
+			margin: 20px;
+		}
 	}
 
 	.event-text {
 		word-wrap: break-word;
 		padding-right: 15px;
+		font-size: clamp(17px, 2vw, 22px);
+		padding: 20px;
 	}
 
 	.event-ctn h1 {
-		font-size: 25px;
+		font-size: clamp(24px, 3.5vw, 36px);
 		margin: 20px 0px 20px 0;
 	}
 
@@ -316,7 +262,7 @@
 
 	.info-ctn h1 {
 		margin: 10px;
-		font-size: 2.8em;
+		font-size: clamp(28px, 4vw, 40px);
 		padding: 7px;
 		text-align: center;
 	}
@@ -325,7 +271,7 @@
 		text-align: center;
 		margin: 2px;
 		padding: 8px;
-		font-size: 22px;
+		font-size: clamp(17px, 2vw, 22px);
 	}
 
 	.cover-text {
@@ -347,7 +293,9 @@
 
 	.outer-ctn {
 		position: relative;
-		width : 100%;
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 
 	.cover-item {
@@ -423,10 +371,6 @@
 
 	.cover {
 		margin-top: 0px;
-		background-image: url('https://handlers.ca/wp-content/uploads/2022/06/Rose-Backg3.png');
-		background-position: center center;
-		background-size: cover;
-		background-repeat: no-repeat;
 	}
 
 	.logo-img {
@@ -434,8 +378,8 @@
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 200px;
-		height: 200px;
+		width: 130px;
+		height: 130px;
 		-webkit-animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 		animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 		animation-delay: 500ms;

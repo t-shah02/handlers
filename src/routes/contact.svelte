@@ -4,7 +4,7 @@
 
 	const MAX_CHARACTER_LIMIT = 5000;
 	const LIMIT_REACHED_COLOR = '#FF1E00';
-	const LIMIT_NOT_REACHED_COLOR = 'black;';
+	const LIMIT_NOT_REACHED_COLOR = 'white;';
 	const WORD_BLACKLIST = [
 		'fuck',
 		'bitch',
@@ -136,9 +136,8 @@
 		<h1>Contact us now!</h1>
 	</div>
 	<div>
-		{#if !loading}:
+		{#if !loading}
 			<h1 class="send-msg-txt">Send us a message</h1>
-
 			<textarea
 				bind:value={message}
 				bind:this={textbox}
@@ -165,12 +164,11 @@
 			{/if}
 
 			{#if messageSent}
-				<div in:slide out:slide class="notification is-primary" style="background-color:rgba(246, 246, 6, 0.65);">
+				<div in:slide out:slide class="notification is-primary" style="background-color: #FFBF00;">
 					<button on:click={() => (messageSent = false)} class="delete" />
 					We have received the message successfully! Cheers to your next event. 
 				</div>
 			{/if}
-
 			<button on:click={sendMessage} type="submit" class="button is-success">
 				Send message
 				<i class="fa-solid fa-paper-plane" />
@@ -181,9 +179,9 @@
 
 		<div class="contact-info">
 			<h2>
-				<a style="color:black;" href="mailto:handlers.ca@gmail.com">handlers.ca@gmail.com</a>
+				<a style="color:white;" href="mailto:handlers.ca@gmail.com">handlers.ca@gmail.com</a>
 			</h2>
-			<h2 style="color : black;">999-999-9999</h2>
+			<h2 style="color : white;">999-999-9999</h2>
 		</div>
 	</div>
 </div>
@@ -207,7 +205,7 @@
 	.send-msg-txt {
 		text-align: left;
 		font-size: 22px;
-		color: black;
+		color: white;
 	}
 
 	i {
@@ -232,6 +230,8 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 15px;
+		background-color: #FFBF00;
+		color: black;
 	}
 
 	h2 {
@@ -256,26 +256,22 @@
 		text-align: center;
 		margin-bottom: 0px;
 		font-size: clamp(31px, 4vw, 45px);
-		color: black;
+		color: white;
 	}
 
 	.fade-ctn {
-		background-image: url('https://res.cloudinary.com/yuliu/image/upload/c_crop,h_1900,x_530,y_1000/a_-2/v1662921534/unknown_gbhlbm.png');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/yuliu/image/upload/c_crop,h_3951,x_1171/v1663088602/pexels-pixabay-255483_ebx6sg.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: top center;
+		background-position: center;
 		width: 100%;
+		background-color:rgba(0,0,0,0.6);	
 		z-index: 1000;
 		padding-bottom: 50px;
 	}
 
-	.button {
-		background-color: rgba(246, 246, 6, 0.65);
-		color: black;
-	}
-
 	.notification {
-		color:black;
+		color:white;
 		display : flex;
 		justify-content: center;
 		align-items: center;

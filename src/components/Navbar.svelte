@@ -97,7 +97,7 @@
 	.navbar {
 		background-color: black;
 		z-index: 1000;
-		border-bottom: 3px solid rgba(246, 246, 6, 0.65);;
+		border-bottom: 3px solid #FFBF00;
 	}
 
 	.navbar-item {
@@ -106,7 +106,7 @@
 	}
 
 	.hover-item:hover {
-		color: rgba(246, 246, 6, 0.65);;
+		color: #FFBF00;
 		background-color : inherit;
 	}
 

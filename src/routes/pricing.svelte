@@ -21,24 +21,23 @@
 
 <div class="pricing-message">
     <h1>Pricing Message</h1><br>
-    <img src="https://images.pexels.com/photos/3810565/pexels-photo-3810565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
 </div>
 
 <div data-aos="zoom-in" class="card-box">
     <div class="cards">
-        <Card planName="An Intimate Affair" price="$35" guestRange="For 5 to 50 Guests" perks={test} headerColor="rgb(160,160,6)" />
+        <Card planName="An Intimate Affair" price="$35" guestRange="For 5 to 50 Guests" perks={test} headerColor="#FFBF00" />
     </div>
     <div class="cards">
-        <Card planName="A Small Gathering" price="$45" guestRange="For 50 to 100 Guests" perks={test} headerColor="rgb(160,160,6)"/>
+        <Card planName="A Small Gathering" price="$45" guestRange="For 50 to 100 Guests" perks={test} headerColor="#FFBF00"/>
     </div>
     <div class="cards">
-        <Card planName="A Moderately Sized Event" price="$55" guestRange="For 100 to 250 Guests" perks={test} headerColor="rgb(160,160,6)"/>
+        <Card planName="A Moderately Sized Event" price="$55" guestRange="For 100 to 250 Guests" perks={test} headerColor="#FFBF00"/>
     </div>
     <div class="cards">
-        <Card planName="A Substantial Event" price="$65" guestRange="For 250 to 1,000+ Guests" perks={test} headerColor="rgb(160,160,6)" />
+        <Card planName="A Substantial Event" price="$65" guestRange="For 250 to 1,000+ Guests" perks={test} headerColor="#FFBF00" />
     </div>
     <div class="cards">
-        <Card planName="A White Glove Event" price="$100" guestRange="For 25 to 50 Guests" perks={test} headerColor="rgb(160,160,6)" />
+        <Card planName="A White Glove Event" price="$100" guestRange="For 25 to 50 Guests" perks={test} headerColor="#FFBF00" />
     </div>
 </div>
 
@@ -105,7 +104,7 @@
     }
     }
 
-    @media only screen and (min-width: 1024px) and (max-width: 2048px) {
+    @media only screen and (min-width: 1024px) and (max-width: 1680px) {
         .cards {
         width: 33.33333%;
     }

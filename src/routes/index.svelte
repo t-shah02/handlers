@@ -15,10 +15,10 @@
 
 <div class="cover">
 	<div data-aos="fade-right" class="text-box cover-item">
-		<h1 class="cover-text">AN UNFORGETTABLE NIGHT, AN EXCLUSIVE AFFAIR, AN EVENT TO REMEMBER</h1>
 		<div class="logo-img cover-item" />
 		<h1 class="cover-text">We'll Handle It</h1>
 		<h2>Event Planning | Event Management | Event Staffing</h2>
+		<h2>AN UNFORGETTABLE NIGHT, AN EXCLUSIVE AFFAIR, AN EVENT TO REMEMBER</h2>
 	</div>
 </div>
 
@@ -142,7 +142,7 @@
 
 	.contact {
 		display: inline-block;
-		background-color: rgba(246, 246, 6, 0.65);
+		background-color: #FFBF00;
 		color: white;
 		padding: 10px 7px 10px 7px;
 		margin-top: 10px;
@@ -166,7 +166,6 @@
 		margin-bottom: 70px;
 		width: 75%;
 		border-radius: 0px;
-		box-shadow: 2px 2px 4px 8px hsla(60, 95%, 49%, 0.65);
 		word-wrap: break-word;
 	}
 
@@ -183,7 +182,6 @@
 			margin-bottom: 70px;
 			width: 75%;
 			border-radius: 0px;
-			box-shadow: 2px 2px 4px 8px hsla(60, 95%, 49%, 0.65);
 			word-wrap: break-word;
 		}
 	}
@@ -270,20 +268,20 @@
 		margin: 10px;
 		font-size: clamp(28px, 4vw, 40px);
 		padding: 7px;
-		text-align: center;
+		text-align: left;
 	}
 
 	.info-ctn p {
-		text-align: center;
+		text-align: left;
 		margin: 2px;
 		padding: 8px;
 		font-size: clamp(17px, 2vw, 22px);
 	}
 
-	.cover-text {
+	.cover-text {	
 		color: white;
 		text-align: center;
-		font-size: 35px;
+		font-size: clamp(18px, 2vw, 24px);
 		margin-right: 7.5px;
 	}
 
@@ -305,7 +303,8 @@
 	}
 
 	.cover-item {
-		margin: 40px 40px 0 40px;
+		margin: 40px 40px 80px 40px;
+		margin-top: 90px;
 	}
 
 	.heading {
@@ -367,8 +366,7 @@
 		text-align: center;
 		color: white;
 		font-weight: 100;
-		font-size: 17px;
-		margin-bottom: 15px;
+		font-size: clamp(17px, 2vw, 24px);
 	}
 
 	.cover-text {
@@ -391,5 +389,6 @@
 		animation-delay: 500ms;
 		margin-bottom: 0px;
 		margin-top: 0px;
+		scale:1.4;
 	}
 </style>
